@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var newsTableView: UITableView!
+    let data: [String] = ["first", "second", "third", "fourth", "fifth"]
+    
+    var posts: [Post] = []
+    var parser = XMLParser()
+    var tempPost: Post? = nil
+    var tempElement: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+        delegateTableView()
+        createParser()
+    }    
 }
+
 
