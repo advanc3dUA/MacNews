@@ -16,40 +16,32 @@ extension ViewController: XMLParserDelegate {
         parser.delegate = self
         parser.parse()
     }
-    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        print("parse error: ", parseError)
+    
+    func parserDidStartDocument(_ parser: XMLParser) {
+        arrFinal.removeAll()
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        tempElement = elementName
         if elementName == "item" {
-            tempPost = Post(title: "", link: "", date: "")
+            arrDetail.removeAll()
         }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "item" {
-            if let post = tempPost {
-                posts.append(post)
-            }
-            tempPost = nil
+        if elementName == "title" || elementName == "link" {
+            arrDetail.append(content)
+        } else if elementName == "item" {
+            arrFinal.append(arrDetail)
         }
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        guard let post = tempPost else { return }
-        let str = string
-        if tempElement == "title" {
-            tempPost?.title = post.title ?? "no title" + str
-        }
-        
-        if tempElement == "link" {
-            tempPost?.link = post.link ?? "no link" + str
-        }
-        
-        if tempElement == "pubDate" {
-            tempPost?.date = post.date ?? "no date" + str
-        }
+        content = string
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print(arrFinal)
+        newsTableView.reloadData()
     }
     
 }

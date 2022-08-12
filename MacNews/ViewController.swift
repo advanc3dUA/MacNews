@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var newsTableView: UITableView!
     let data: [String] = ["first", "second", "third", "fourth", "fifth"]
     
-    var posts: [Post] = []
+    //var posts: [Post] = []
     var parser = XMLParser()
-    var tempPost: Post? = nil
-    var tempElement: String?
+    var arrDetail: [String] = []
+    var arrFinal: [[String]] = []
+    var content = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

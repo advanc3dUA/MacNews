@@ -16,6 +16,9 @@ class NewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        titleLabel.numberOfLines = 0
+//        titleLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 800)
+//        titleLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
