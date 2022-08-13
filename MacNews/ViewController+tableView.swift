@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     public func delegateTableView() {
         newsTableView.delegate = self
         newsTableView.dataSource = self
@@ -17,6 +18,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "fullStory" else { return }
+        let indexPath = newsTableView.indexPathForSelectedRow!
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let fullStoryVC = navigationVC.topViewController as? FullStoryViewController else { return }
+        fullStoryVC.text = finalPostsArray[indexPath.row].description
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,5 +45,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

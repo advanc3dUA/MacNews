@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MacRumor-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MacNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,6 +66,7 @@
                                         <connections>
                                             <outlet property="titleImageImageView" destination="beJ-SA-JOv" id="DDx-Tw-5qy"/>
                                             <outlet property="titleTextView" destination="K5E-Ef-nX0" id="qnI-eI-K4s"/>
+                                            <segue destination="Dqp-NP-znF" kind="presentation" identifier="fullStory" id="RXL-fj-X4g"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,7 +84,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0FG-F2-JcI" secondAttribute="trailing" constant="20" id="x2V-ZO-yR9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MacRumor" id="XxU-zj-Aka"/>
+                    <navigationItem key="navigationItem" id="XxU-zj-Aka"/>
                     <connections>
                         <outlet property="newsTableView" destination="0FG-F2-JcI" id="ELY-iW-K5Z"/>
                     </connections>
@@ -91,6 +92,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="123.88392857142857"/>
+        </scene>
+        <!--Full Story-->
+        <scene sceneID="iZD-Zb-Dek">
+            <objects>
+                <viewController id="JgR-O0-tBY" customClass="FullStoryViewController" customModule="MacNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agf-0v-KW0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-Xc-iYo">
+                                <rect key="frame" x="20" y="56" width="374" height="237"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-1J-RhI">
+                                <rect key="frame" x="20" y="301" width="374" height="436"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YV2-K5-ln2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xZi-Xc-iYo" firstAttribute="top" secondItem="YV2-K5-ln2" secondAttribute="top" id="EBN-u2-V3b"/>
+                            <constraint firstItem="xZi-Xc-iYo" firstAttribute="leading" secondItem="YV2-K5-ln2" secondAttribute="leading" constant="20" id="SS2-hr-6Rj"/>
+                            <constraint firstItem="YV2-K5-ln2" firstAttribute="trailing" secondItem="xZi-Xc-iYo" secondAttribute="trailing" constant="20" id="dSq-Ay-Xu8"/>
+                            <constraint firstItem="YV2-K5-ln2" firstAttribute="bottom" secondItem="xZi-Xc-iYo" secondAttribute="bottom" constant="515" id="dbM-cR-Wzd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Full Story" id="MFf-Nn-9W7">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="FKW-xs-Xp5">
+                            <connections>
+                                <segue destination="vx8-gI-sqW" kind="unwind" unwindAction="unwindSegueWithSegue:" id="cY9-Dj-yjP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Translate" id="SEd-hM-9og"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="pfT-1J-RhI" id="dIc-tt-20W"/>
+                        <outlet property="imageView" destination="xZi-Xc-iYo" id="CQH-lM-EPm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJb-xL-ULV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vx8-gI-sqW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2679.7101449275365" y="124.55357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7fN-FU-Zsl">
@@ -109,6 +158,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKc-aO-7cY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rTI-CP-nC0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dqp-NP-znF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LEc-v7-RuV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JgR-O0-tBY" kind="relationship" relationship="rootViewController" id="hGH-up-LGW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLO-Au-koj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769.5652173913045" y="124.55357142857142"/>
         </scene>
     </scenes>
     <resources>

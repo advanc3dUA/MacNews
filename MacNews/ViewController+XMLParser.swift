@@ -11,7 +11,7 @@ import UIKit
 extension ViewController: XMLParserDelegate {
     public func createParser() {
         guard let rssFeedURL = URL(string: "https://feeds.macrumors.com/MacRumors-All") else { return }
-//        guard let rssFeedURL = URL(string: "https://3dnews.ru/breaking/rss/") else { return }
+        //guard let rssFeedURL = URL(string: "https://3dnews.ru/breaking/rss/") else { return }
         guard let parser = XMLParser(contentsOf: rssFeedURL) else { return }
         parser.delegate = self
         parser.parse()
@@ -28,11 +28,6 @@ extension ViewController: XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-//        if elementName == "title" || elementName == "link" {
-//            arrDetail.append(content)
-//        } else if elementName == "item" {
-//            arrFinal.append(arrDetail)
-//        }
         
         switch elementName {
         case "title": currentPostArray.title = content
@@ -49,7 +44,6 @@ extension ViewController: XMLParserDelegate {
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
-        //print(finalPostsArray)
         newsTableView.reloadData()
     }
     
