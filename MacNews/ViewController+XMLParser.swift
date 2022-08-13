@@ -18,20 +18,29 @@ extension ViewController: XMLParserDelegate {
     }
     
     func parserDidStartDocument(_ parser: XMLParser) {
-        arrFinal.removeAll()
+        finalPostsArray.removeAll()
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         if elementName == "item" {
-            arrDetail.removeAll()
+            currentPostArray.removeAll()
         }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "title" || elementName == "link" {
-            arrDetail.append(content)
-        } else if elementName == "item" {
-            arrFinal.append(arrDetail)
+//        if elementName == "title" || elementName == "link" {
+//            arrDetail.append(content)
+//        } else if elementName == "item" {
+//            arrFinal.append(arrDetail)
+//        }
+        
+        switch elementName {
+        case "title": currentPostArray.title = content
+        case "link": currentPostArray.link = content
+        case "description": currentPostArray.description = content
+        case "pubDate": currentPostArray.date = content
+        case "item": finalPostsArray.append(currentPostArray)
+        default: return
         }
     }
     
@@ -40,7 +49,7 @@ extension ViewController: XMLParserDelegate {
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
-        print(arrFinal)
+        //print(finalPostsArray)
         newsTableView.reloadData()
     }
     

@@ -12,6 +12,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     public func delegateTableView() {
         newsTableView.delegate = self
         newsTableView.dataSource = self
+        newsTableView.rowHeight = 75
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -19,16 +20,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrFinal.count
+        finalPostsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
         cell.backgroundColor = .lightGray
         
-        let arrTemp = arrFinal[indexPath.row]
-        cell.titleLabel.text = arrTemp[0]
-        
+        let postForCurrentRow = finalPostsArray[indexPath.row]
+        cell.titleTextView.text = postForCurrentRow.title
         return cell
     }
     

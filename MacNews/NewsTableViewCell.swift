@@ -7,16 +7,15 @@
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+class NewsTableViewCell: UITableViewCell {    
     
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var titleImageImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        titleLabel.numberOfLines = 0
+        
 //        titleLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 800)
 //        titleLabel.sizeToFit()
     }

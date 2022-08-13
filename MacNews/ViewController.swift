@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     
     //var posts: [Post] = []
     var parser = XMLParser()
-    var arrDetail: [String] = []
-    var arrFinal: [[String]] = []
+//    var arrDetail: [String] = []
+//    var arrFinal: [[String]] = []
+    var currentPostArray = Post()
+    var finalPostsArray: [Post] = []
     var content = ""
     
     override func viewDidLoad() {
