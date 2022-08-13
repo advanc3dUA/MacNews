@@ -32,7 +32,7 @@ extension ViewController: XMLParserDelegate {
         switch elementName {
         case "title": currentPostArray.title = content
         case "link": currentPostArray.link = content
-        case "description": currentPostArray.description = content
+        case "description": currentPostArray.description = content; currentPostArray.image = content.getImage()
         case "pubDate": currentPostArray.date = content
         case "item": finalPostsArray.append(currentPostArray)
         default: return

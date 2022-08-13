@@ -29,6 +29,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let navigationVC = segue.destination as? UINavigationController else { return }
         guard let fullStoryVC = navigationVC.topViewController as? FullStoryViewController else { return }
         fullStoryVC.text = finalPostsArray[indexPath.row].description
+        fullStoryVC.imageName = finalPostsArray[indexPath.row].image
+        print(fullStoryVC.imageName)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

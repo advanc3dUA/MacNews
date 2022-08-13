@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF9ABFC928A7B2810054A2DF /* FullStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9ABFC828A7B2810054A2DF /* FullStoryViewController.swift */; };
+		BF9ABFCC28A7BA8C0054A2DF /* FindImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9ABFCB28A7BA8C0054A2DF /* FindImage.swift */; };
 		BFA03C4D28A6451F003F6931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C4C28A6451F003F6931 /* AppDelegate.swift */; };
 		BFA03C4F28A6451F003F6931 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C4E28A6451F003F6931 /* SceneDelegate.swift */; };
 		BFA03C5128A6451F003F6931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C5028A6451F003F6931 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		BF9ABFC828A7B2810054A2DF /* FullStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullStoryViewController.swift; sourceTree = "<group>"; };
+		BF9ABFCB28A7BA8C0054A2DF /* FindImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindImage.swift; sourceTree = "<group>"; };
 		BFA03C4928A6451F003F6931 /* MacNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA03C4C28A6451F003F6931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA03C4E28A6451F003F6931 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				BFA03C6128A64C6F003F6931 /* NewsTableViewCell.swift */,
 				BFA03C5228A6451F003F6931 /* Main.storyboard */,
 				BF9ABFC828A7B2810054A2DF /* FullStoryViewController.swift */,
+				BF9ABFCB28A7BA8C0054A2DF /* FindImage.swift */,
 				BFA03C5528A64520003F6931 /* Assets.xcassets */,
 				BFA03C5728A64520003F6931 /* LaunchScreen.storyboard */,
 				BFA03C5A28A64520003F6931 /* Info.plist */,
@@ -154,6 +157,7 @@
 			files = (
 				BFA03C5128A6451F003F6931 /* ViewController.swift in Sources */,
 				BFA03C6C28A65A0F003F6931 /* ViewController+XMLParser.swift in Sources */,
+				BF9ABFCC28A7BA8C0054A2DF /* FindImage.swift in Sources */,
 				BFA03C4D28A6451F003F6931 /* AppDelegate.swift in Sources */,
 				BF9ABFC928A7B2810054A2DF /* FullStoryViewController.swift in Sources */,
 				BFA03C6228A64C6F003F6931 /* NewsTableViewCell.swift in Sources */,

@@ -9,15 +9,23 @@ import UIKit
 
 class FullStoryViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var storyImage: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var text: String?
+    var imageName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         descriptionTextView.text = text
+        
+        if imageName != nil {
+            let image = UIImage(named: imageName!)
+            storyImage.image = image
+        //TODO: need to download remote photo
+        }
+        
     }
     
 

@@ -133,7 +133,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="pfT-1J-RhI" id="dIc-tt-20W"/>
-                        <outlet property="imageView" destination="xZi-Xc-iYo" id="CQH-lM-EPm"/>
+                        <outlet property="storyImage" destination="xZi-Xc-iYo" id="arl-RB-cwc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJb-xL-ULV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
