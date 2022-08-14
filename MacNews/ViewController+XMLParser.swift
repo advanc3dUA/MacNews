@@ -12,7 +12,6 @@ extension ViewController: XMLParserDelegate {
     
     public func createParser() {
         guard let rssFeedURL = URL(string: "https://feeds.macrumors.com/MacRumors-All") else { return }
-        //guard let rssFeedURL = URL(string: "https://3dnews.ru/breaking/rss/") else { return }
         guard let parser = XMLParser(contentsOf: rssFeedURL) else { return }
         parser.delegate = self
         parser.parse()

@@ -18,7 +18,10 @@ class FullStoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        descriptionTextView.text = text
+        var modifiedText = text?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        modifiedText = modifiedText?.replacingOccurrences(of: "&zwnj;", with: "", options: .regularExpression, range: nil)
+        
+        descriptionTextView.text = modifiedText
         
         if imageName != nil {
             setImageWith(stringName: imageName!, imageView: storyImage)
