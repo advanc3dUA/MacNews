@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension ViewController: XMLParserDelegate {
+    
     public func createParser() {
         guard let rssFeedURL = URL(string: "https://feeds.macrumors.com/MacRumors-All") else { return }
         //guard let rssFeedURL = URL(string: "https://3dnews.ru/breaking/rss/") else { return }
@@ -32,7 +33,7 @@ extension ViewController: XMLParserDelegate {
         switch elementName {
         case "title": currentPostArray.title = content
         case "link": currentPostArray.link = content
-        case "description": currentPostArray.description = content; currentPostArray.image = content.getImage()
+        case "description": currentPostArray.description = content; currentPostArray.image = content.getImageName()
         case "pubDate": currentPostArray.date = content
         case "item": finalPostsArray.append(currentPostArray)
         default: return

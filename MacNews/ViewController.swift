@@ -9,15 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var newsTableView: UITableView!
-    
     var parser = XMLParser()
     var currentPostArray = Post()
     var finalPostsArray: [Post] = []
     var content = ""
     
+    @IBOutlet weak var newsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "MacRumor"
         delegateTableView()
         createParser()
