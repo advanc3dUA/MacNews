@@ -129,6 +129,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="pfT-1J-RhI" id="dIc-tt-20W"/>
+                        <outlet property="imageBottomConstraint" destination="dbM-cR-Wzd" id="Mdb-I1-6B4"/>
                         <outlet property="storyImage" destination="xZi-Xc-iYo" id="arl-RB-cwc"/>
                     </connections>
                 </viewController>

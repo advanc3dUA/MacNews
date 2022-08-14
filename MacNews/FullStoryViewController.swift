@@ -11,6 +11,7 @@ class FullStoryViewController: UIViewController {
 
     @IBOutlet weak var storyImage: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var imageBottomConstraint: NSLayoutConstraint!
     
     var text: String?
     var imageName: String?
@@ -26,6 +27,10 @@ class FullStoryViewController: UIViewController {
         if imageName != nil {
             setImageWith(stringName: imageName!, imageView: storyImage)
             storyImage.contentMode = .scaleAspectFill
+        } else {
+            storyImage.isHidden = true
+            imageBottomConstraint.isActive = false
+            print("hidden")
         }
         
     }
