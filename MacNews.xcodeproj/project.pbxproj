@@ -19,6 +19,7 @@
 		BFA03C6628A651B1003F6931 /* PostStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6528A651B1003F6931 /* PostStructure.swift */; };
 		BFA03C6928A659A4003F6931 /* ViewController+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6828A659A4003F6931 /* ViewController+tableView.swift */; };
 		BFA03C6C28A65A0F003F6931 /* ViewController+XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6B28A65A0F003F6931 /* ViewController+XMLParser.swift */; };
+		BFD369DC28A8FC51007D87ED /* SetImageWithURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BFA03C6528A651B1003F6931 /* PostStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStructure.swift; sourceTree = "<group>"; };
 		BFA03C6828A659A4003F6931 /* ViewController+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+tableView.swift"; sourceTree = "<group>"; };
 		BFA03C6B28A65A0F003F6931 /* ViewController+XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+XMLParser.swift"; sourceTree = "<group>"; };
+		BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageWithURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				BFA03C6128A64C6F003F6931 /* NewsTableViewCell.swift */,
 				BFA03C5228A6451F003F6931 /* Main.storyboard */,
 				BF9ABFC828A7B2810054A2DF /* FullStoryViewController.swift */,
+				BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */,
 				BF9ABFCB28A7BA8C0054A2DF /* FindImage.swift */,
 				BFA03C5528A64520003F6931 /* Assets.xcassets */,
 				BFA03C5728A64520003F6931 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD369DC28A8FC51007D87ED /* SetImageWithURL.swift in Sources */,
 				BFA03C5128A6451F003F6931 /* ViewController.swift in Sources */,
 				BFA03C6C28A65A0F003F6931 /* ViewController+XMLParser.swift in Sources */,
 				BF9ABFCC28A7BA8C0054A2DF /* FindImage.swift in Sources */,

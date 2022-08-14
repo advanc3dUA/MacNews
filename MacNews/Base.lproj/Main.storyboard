@@ -102,11 +102,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-Xc-iYo">
-                                <rect key="frame" x="20" y="56" width="374" height="237"/>
+                                <rect key="frame" x="20" y="56" width="374" height="228"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-1J-RhI">
-                                <rect key="frame" x="20" y="301" width="374" height="436"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-1J-RhI">
+                                <rect key="frame" x="20" y="292" width="374" height="516"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -117,10 +116,14 @@
                         <viewLayoutGuide key="safeArea" id="YV2-K5-ln2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pfT-1J-RhI" firstAttribute="trailing" secondItem="xZi-Xc-iYo" secondAttribute="trailing" id="82t-Nc-GJP"/>
                             <constraint firstItem="xZi-Xc-iYo" firstAttribute="top" secondItem="YV2-K5-ln2" secondAttribute="top" id="EBN-u2-V3b"/>
+                            <constraint firstItem="pfT-1J-RhI" firstAttribute="leading" secondItem="xZi-Xc-iYo" secondAttribute="leading" id="FL2-5c-QoI"/>
+                            <constraint firstItem="pfT-1J-RhI" firstAttribute="bottom" secondItem="YV2-K5-ln2" secondAttribute="bottom" id="I7b-Yc-h12"/>
+                            <constraint firstItem="pfT-1J-RhI" firstAttribute="top" secondItem="xZi-Xc-iYo" secondAttribute="bottom" constant="8" id="S22-Zs-CpZ"/>
                             <constraint firstItem="xZi-Xc-iYo" firstAttribute="leading" secondItem="YV2-K5-ln2" secondAttribute="leading" constant="20" id="SS2-hr-6Rj"/>
                             <constraint firstItem="YV2-K5-ln2" firstAttribute="trailing" secondItem="xZi-Xc-iYo" secondAttribute="trailing" constant="20" id="dSq-Ay-Xu8"/>
-                            <constraint firstItem="YV2-K5-ln2" firstAttribute="bottom" secondItem="xZi-Xc-iYo" secondAttribute="bottom" constant="515" id="dbM-cR-Wzd"/>
+                            <constraint firstItem="YV2-K5-ln2" firstAttribute="bottom" secondItem="xZi-Xc-iYo" secondAttribute="bottom" constant="524" id="dbM-cR-Wzd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Full Story" id="MFf-Nn-9W7">

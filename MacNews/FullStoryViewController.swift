@@ -21,9 +21,8 @@ class FullStoryViewController: UIViewController {
         descriptionTextView.text = text
         
         if imageName != nil {
-            let image = UIImage(named: imageName!)
-            storyImage.image = image
-        //TODO: need to download remote photo
+            setImageWith(stringName: imageName!, imageView: storyImage)
+            storyImage.contentMode = .scaleAspectFill
         }
         
     }
