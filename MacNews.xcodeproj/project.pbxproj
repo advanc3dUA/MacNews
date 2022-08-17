@@ -16,7 +16,7 @@
 		BFA03C5628A64520003F6931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA03C5528A64520003F6931 /* Assets.xcassets */; };
 		BFA03C5928A64520003F6931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA03C5728A64520003F6931 /* LaunchScreen.storyboard */; };
 		BFA03C6228A64C6F003F6931 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6128A64C6F003F6931 /* NewsTableViewCell.swift */; };
-		BFA03C6628A651B1003F6931 /* PostStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6528A651B1003F6931 /* PostStructure.swift */; };
+		BFA03C6628A651B1003F6931 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6528A651B1003F6931 /* Post.swift */; };
 		BFA03C6928A659A4003F6931 /* ViewController+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6828A659A4003F6931 /* ViewController+tableView.swift */; };
 		BFA03C6C28A65A0F003F6931 /* ViewController+XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA03C6B28A65A0F003F6931 /* ViewController+XMLParser.swift */; };
 		BFD369DC28A8FC51007D87ED /* SetImageWithURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */; };
@@ -34,7 +34,7 @@
 		BFA03C5828A64520003F6931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFA03C5A28A64520003F6931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA03C6128A64C6F003F6931 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		BFA03C6528A651B1003F6931 /* PostStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStructure.swift; sourceTree = "<group>"; };
+		BFA03C6528A651B1003F6931 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BFA03C6828A659A4003F6931 /* ViewController+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+tableView.swift"; sourceTree = "<group>"; };
 		BFA03C6B28A65A0F003F6931 /* ViewController+XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+XMLParser.swift"; sourceTree = "<group>"; };
 		BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageWithURL.swift; sourceTree = "<group>"; };
@@ -51,6 +51,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF42353228ACE717008E6FBF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BF42353528ACE73A008E6FBF /* Controller */,
+				BF42353428ACE734008E6FBF /* View */,
+				BF42353328ACE728008E6FBF /* Model */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BF42353328ACE728008E6FBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF42353428ACE734008E6FBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03C5228A6451F003F6931 /* Main.storyboard */,
+				BFA03C5728A64520003F6931 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF42353528ACE73A008E6FBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03C4C28A6451F003F6931 /* AppDelegate.swift */,
+				BFA03C4E28A6451F003F6931 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF42353628ACE799008E6FBF /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03C5528A64520003F6931 /* Assets.xcassets */,
+				BFA03C5A28A64520003F6931 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		BF42353728ACE84A008E6FBF /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				BF42353A28ACE86A008E6FBF /* Model */,
+				BF42353928ACE863008E6FBF /* View */,
+				BF42353828ACE855008E6FBF /* Controller */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		BF42353828ACE855008E6FBF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03C5028A6451F003F6931 /* ViewController.swift */,
+				BFA03C6B28A65A0F003F6931 /* ViewController+XMLParser.swift */,
+				BFA03C6828A659A4003F6931 /* ViewController+tableView.swift */,
+				BF9ABFC828A7B2810054A2DF /* FullStoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF42353928ACE863008E6FBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03C6128A64C6F003F6931 /* NewsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF42353A28ACE86A008E6FBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFA03C6528A651B1003F6931 /* Post.swift */,
+				BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */,
+				BF9ABFCB28A7BA8C0054A2DF /* FindImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BFA03C4028A6451F003F6931 = {
 			isa = PBXGroup;
 			children = (
@@ -70,20 +153,9 @@
 		BFA03C4B28A6451F003F6931 /* MacNews */ = {
 			isa = PBXGroup;
 			children = (
-				BFA03C4C28A6451F003F6931 /* AppDelegate.swift */,
-				BFA03C4E28A6451F003F6931 /* SceneDelegate.swift */,
-				BFA03C5028A6451F003F6931 /* ViewController.swift */,
-				BFA03C6B28A65A0F003F6931 /* ViewController+XMLParser.swift */,
-				BFA03C6828A659A4003F6931 /* ViewController+tableView.swift */,
-				BFA03C6528A651B1003F6931 /* PostStructure.swift */,
-				BFA03C6128A64C6F003F6931 /* NewsTableViewCell.swift */,
-				BFA03C5228A6451F003F6931 /* Main.storyboard */,
-				BF9ABFC828A7B2810054A2DF /* FullStoryViewController.swift */,
-				BFD369DB28A8FC51007D87ED /* SetImageWithURL.swift */,
-				BF9ABFCB28A7BA8C0054A2DF /* FindImage.swift */,
-				BFA03C5528A64520003F6931 /* Assets.xcassets */,
-				BFA03C5728A64520003F6931 /* LaunchScreen.storyboard */,
-				BFA03C5A28A64520003F6931 /* Info.plist */,
+				BF42353228ACE717008E6FBF /* Application */,
+				BF42353728ACE84A008E6FBF /* Main Screen */,
+				BF42353628ACE799008E6FBF /* Supporting files */,
 			);
 			path = MacNews;
 			sourceTree = "<group>";
@@ -165,7 +237,7 @@
 				BFA03C4D28A6451F003F6931 /* AppDelegate.swift in Sources */,
 				BF9ABFC928A7B2810054A2DF /* FullStoryViewController.swift in Sources */,
 				BFA03C6228A64C6F003F6931 /* NewsTableViewCell.swift in Sources */,
-				BFA03C6628A651B1003F6931 /* PostStructure.swift in Sources */,
+				BFA03C6628A651B1003F6931 /* Post.swift in Sources */,
 				BFA03C6928A659A4003F6931 /* ViewController+tableView.swift in Sources */,
 				BFA03C4F28A6451F003F6931 /* SceneDelegate.swift in Sources */,
 			);
